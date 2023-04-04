@@ -13,6 +13,7 @@ struct ContentView: View {
         @State private var wrongUsername = 0
         @State private var wrongPassword = 0
         @State private var showingLoginScreen = false
+        @State private var showingLoginScreen2 = false
         
         var body: some View {
             NavigationView {
@@ -26,54 +27,37 @@ struct ContentView: View {
                         .scale(1.65)
                         .foregroundColor(.white)
                     VStack{
-                        Image("pngwingcom")
+                        Spacer()
+                        Image("homepage")
                             .resizable()
-                            .frame(width: 200, height: 300)
-                        Text("Login")
-                            .font(.largeTitle)
-                            .bold()
-                            .padding()
-                            .foregroundColor(.green)
-                        TextField("Username", text: $username)
-                            .padding()
-                            .frame(width: 300, height: 50)
-                            .background(Color.black.opacity(0.05))
-                            .cornerRadius(10)
-                        SecureField("Password", text: $password)
-                            .padding()
-                            .frame(width: 300, height: 50)
-                            .background(Color.black.opacity(0.05))
-                            .cornerRadius(10)
-                        
-                        Button("Login"){
-                            authenticateUser(username: username, passowrd: password)
+                            .frame(width: 340, height: 280)
+                        Spacer()
+                        Button("Get Started"){
+                            showingLoginScreen = true
                         }
                         .foregroundColor(.white)
                         .frame(width: 300, height: 50)
                         .background(Color.green)
-                        .cornerRadius(10)
-                        
-                        NavigationLink(destination: signup(title: "Hi"), isActive: $showingLoginScreen){
+                        .cornerRadius(30)
+                        NavigationLink(destination: login(), isActive: $showingLoginScreen){
                             EmptyView()
                         }
+                        Spacer()
+                        HStack{
+                            Text("New around here?")
+                            Text("Sign in")
+                                .foregroundColor(Color.green)
+                            NavigationLink(destination: login(), isActive: $showingLoginScreen){
+                                EmptyView()
+                            }
+                        }
+                        Spacer()
                     }
                 }
-                .navigationBarHidden(true)
+                
             }
         }
-        func authenticateUser(username: String, passowrd: String){
-            if username.lowercased() == "kavindu" {
-                wrongUsername = 0
-                if passowrd.lowercased() == "kavindu" {
-                    wrongPassword = 0
-                    showingLoginScreen = true
-                }else{
-                    wrongPassword = 2
-                }
-            }else{
-                wrongPassword = 2
-            }
-        }
+
 
 }
 

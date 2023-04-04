@@ -1,14 +1,14 @@
 //
-//  signup.swift
+//  login.swift
 //  gardening-assis-app
 //
-//  Created by kavindu madushan on 2023-04-02.
+//  Created by kavindu madushan on 2023-04-05.
 //
 
 import SwiftUI
 
-struct signup: View {
-        @State private var username = ""
+struct login: View {
+    @State private var username = ""
         @State private var password = ""
         @State private var wrongUsername = 0
         @State private var wrongPassword = 0
@@ -46,14 +46,14 @@ struct signup: View {
                             .cornerRadius(10)
                         
                         Button("Login"){
-                            showingLoginScreen = true
+                            authenticateUser(username: username, passowrd: password)
                         }
                         .foregroundColor(.white)
                         .frame(width: 300, height: 50)
                         .background(Color.green)
                         .cornerRadius(10)
                         
-                        NavigationLink(destination: login(), isActive: $showingLoginScreen){
+                        NavigationLink(destination: signup(), isActive: $showingLoginScreen){
                             EmptyView()
                         }
                     }
@@ -61,10 +61,23 @@ struct signup: View {
                 .navigationBarHidden(true)
             }
         }
+        func authenticateUser(username: String, passowrd: String){
+            if username.lowercased() == "kavindu" {
+                wrongUsername = 0
+                if passowrd.lowercased() == "kavindu" {
+                    wrongPassword = 0
+                    showingLoginScreen = true
+                }else{
+                    wrongPassword = 2
+                }
+            }else{
+                wrongPassword = 2
+            }
+        }
 }
 
-struct signup_Previews: PreviewProvider {
+struct login_Previews: PreviewProvider {
     static var previews: some View {
-        signup()
+        login()
     }
 }

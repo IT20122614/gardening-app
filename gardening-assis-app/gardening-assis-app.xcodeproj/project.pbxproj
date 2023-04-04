@@ -12,6 +12,7 @@
 		E31D200429D9BA2B00BA59BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E31D200329D9BA2B00BA59BC /* Assets.xcassets */; };
 		E31D200729D9BA2B00BA59BC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E31D200629D9BA2B00BA59BC /* Preview Assets.xcassets */; };
 		E31D201029D9BB0600BA59BC /* signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31D200F29D9BB0600BA59BC /* signup.swift */; };
+		E37FB8A329DCC12A0049F86B /* login.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37FB8A229DCC12A0049F86B /* login.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		E31D200329D9BA2B00BA59BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E31D200629D9BA2B00BA59BC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E31D200F29D9BB0600BA59BC /* signup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signup.swift; sourceTree = "<group>"; };
+		E37FB8A229DCC12A0049F86B /* login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = login.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			children = (
 				E31D1FFF29D9BA2A00BA59BC /* gardening_assis_appApp.swift */,
 				E31D200129D9BA2A00BA59BC /* ContentView.swift */,
+				E37FB8A229DCC12A0049F86B /* login.swift */,
 				E31D200F29D9BB0600BA59BC /* signup.swift */,
 				E31D200329D9BA2B00BA59BC /* Assets.xcassets */,
 				E31D200529D9BA2B00BA59BC /* Preview Content */,
@@ -143,6 +146,7 @@
 				E31D201029D9BB0600BA59BC /* signup.swift in Sources */,
 				E31D200229D9BA2A00BA59BC /* ContentView.swift in Sources */,
 				E31D200029D9BA2A00BA59BC /* gardening_assis_appApp.swift in Sources */,
+				E37FB8A329DCC12A0049F86B /* login.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
