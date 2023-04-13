@@ -53,12 +53,12 @@ struct login: View {
                         .background(Color.green)
                         .cornerRadius(10)
                         
-                        NavigationLink(destination: signup(), isActive: $showingLoginScreen){
+                        NavigationLink(destination: HomePage().navigationBarBackButtonHidden(true), isActive: $showingLoginScreen){
                             EmptyView()
                         }
-                    }
+                    }.navigationBarBackButtonHidden(true)
                 }
-                .navigationBarHidden(true)
+                .navigationBarBackButtonHidden(true)
             }
         }
         func authenticateUser(username: String, passowrd: String){

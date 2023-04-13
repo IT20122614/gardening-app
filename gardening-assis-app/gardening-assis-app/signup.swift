@@ -29,7 +29,7 @@ struct signup: View {
                         Image("pngwingcom")
                             .resizable()
                             .frame(width: 200, height: 300)
-                        Text("Login")
+                        Text("Sign up")
                             .font(.largeTitle)
                             .bold()
                             .padding()

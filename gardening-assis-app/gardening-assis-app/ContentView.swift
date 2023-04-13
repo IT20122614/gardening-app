@@ -39,7 +39,7 @@ struct ContentView: View {
                         .frame(width: 300, height: 50)
                         .background(Color.green)
                         .cornerRadius(30)
-                        NavigationLink(destination: login(), isActive: $showingLoginScreen){
+                        NavigationLink(destination: login().navigationBarBackButtonHidden(true), isActive: $showingLoginScreen){
                             EmptyView()
                         }
                         Spacer()

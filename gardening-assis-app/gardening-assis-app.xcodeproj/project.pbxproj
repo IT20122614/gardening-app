@@ -12,6 +12,9 @@
 		E31D200429D9BA2B00BA59BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E31D200329D9BA2B00BA59BC /* Assets.xcassets */; };
 		E31D200729D9BA2B00BA59BC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E31D200629D9BA2B00BA59BC /* Preview Assets.xcassets */; };
 		E31D201029D9BB0600BA59BC /* signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31D200F29D9BB0600BA59BC /* signup.swift */; };
+		E34DF32829E7545A00061015 /* plantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34DF32729E7545A00061015 /* plantModel.swift */; };
+		E3579C4229DDFAAC00F7C900 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3579C4129DDFAAC00F7C900 /* HomePage.swift */; };
+		E360E14329E6DB1000BC40C5 /* SinglePlantDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = E360E14229E6DB1000BC40C5 /* SinglePlantDetails.swift */; };
 		E37FB8A329DCC12A0049F86B /* login.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37FB8A229DCC12A0049F86B /* login.swift */; };
 /* End PBXBuildFile section */
 
@@ -22,6 +25,10 @@
 		E31D200329D9BA2B00BA59BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E31D200629D9BA2B00BA59BC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E31D200F29D9BB0600BA59BC /* signup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signup.swift; sourceTree = "<group>"; };
+		E34DF32729E7545A00061015 /* plantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = plantModel.swift; sourceTree = "<group>"; };
+		E3579C4129DDFAAC00F7C900 /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
+		E360E14129E6CA5000BC40C5 /* plantData.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = plantData.geojson; sourceTree = "<group>"; };
+		E360E14229E6DB1000BC40C5 /* SinglePlantDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePlantDetails.swift; sourceTree = "<group>"; };
 		E37FB8A229DCC12A0049F86B /* login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = login.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,7 +63,11 @@
 			isa = PBXGroup;
 			children = (
 				E31D1FFF29D9BA2A00BA59BC /* gardening_assis_appApp.swift */,
+				E34DF32729E7545A00061015 /* plantModel.swift */,
+				E360E14129E6CA5000BC40C5 /* plantData.geojson */,
 				E31D200129D9BA2A00BA59BC /* ContentView.swift */,
+				E3579C4129DDFAAC00F7C900 /* HomePage.swift */,
+				E360E14229E6DB1000BC40C5 /* SinglePlantDetails.swift */,
 				E37FB8A229DCC12A0049F86B /* login.swift */,
 				E31D200F29D9BB0600BA59BC /* signup.swift */,
 				E31D200329D9BA2B00BA59BC /* Assets.xcassets */,
@@ -143,7 +154,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E360E14329E6DB1000BC40C5 /* SinglePlantDetails.swift in Sources */,
+				E3579C4229DDFAAC00F7C900 /* HomePage.swift in Sources */,
 				E31D201029D9BB0600BA59BC /* signup.swift in Sources */,
+				E34DF32829E7545A00061015 /* plantModel.swift in Sources */,
 				E31D200229D9BA2A00BA59BC /* ContentView.swift in Sources */,
 				E31D200029D9BA2A00BA59BC /* gardening_assis_appApp.swift in Sources */,
 				E37FB8A329DCC12A0049F86B /* login.swift in Sources */,
