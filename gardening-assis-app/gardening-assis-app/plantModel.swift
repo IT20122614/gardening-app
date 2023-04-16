@@ -19,6 +19,7 @@ struct plantModel: Identifiable {
     
 }
 
+
 struct plantList{
     static let allPlants = [
         plantModel(category: "indoor", title: "Oscar Plant", waterLimit: "150", fertilizerCount: "", pruningPercent: "", reportingDays: "", image: "plants2"),
@@ -28,14 +29,14 @@ struct plantList{
     ]
     
     static let indoorPlants = [
-        plantModel(category: "indoor", title: "Oscar Plant", waterLimit: "150", fertilizerCount: "", pruningPercent: "", reportingDays: "", image: "plants2")
+        plantModel(category: "indoor", title: "Oscar Plant", waterLimit: "150", fertilizerCount: "", pruningPercent: "", reportingDays: "", image: "plants2"),
+        plantModel(category: "indoor", title: "Oscar Plant", waterLimit: "150", fertilizerCount: "", pruningPercent: "", reportingDays: "", image: "plants1"),
+        plantModel(category: "indoor", title: "Oscar Plant", waterLimit: "150", fertilizerCount: "", pruningPercent: "", reportingDays: "", image: "plants4"),
     ]
     
     static let outdoorPlants = [
         plantModel(category: "indoor", title: "Oscar Plant", waterLimit: "150", fertilizerCount: "", pruningPercent: "", reportingDays: "", image: "plants2")
     ]
 }
-//let plants = [
-//    plantModel(category: "indoor", title: "Oscar Plant", waterLimit: "150", fertilizerCount: "", pruningPercent: "", reportingDays: "")
-//]
+
 

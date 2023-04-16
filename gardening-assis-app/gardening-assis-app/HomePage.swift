@@ -6,7 +6,9 @@
 //
 
 import SwiftUI
-var selectedCategory:String = "All"
+var selectedCategory = "All"
+
+
 
 
 struct HomePage_Previews: PreviewProvider {
@@ -21,14 +23,21 @@ struct FilterBtn: View{
     var text: String
     
     @Binding var selected: String
+    @State var refresh: Bool = false
     
     var body: some View{
         Button(action: {
             withAnimation(.spring(), {
                 selected = text
-                selectedCategory = selected
+                selectedCategory = text
+                
+                
                 
             })
+//            refresh.toggle()
+            selectedCategory = text
+            print("value>>>>:  \(selectedCategory)")
+            
         }){
             Text(text)
                 .fontWeight(.medium)
@@ -98,20 +107,22 @@ struct HomePage: View {
                         RecommendedComponent(title: selectedCategory)
                         
 
-                        ScrollView(.horizontal, showsIndicators: false){
-                            HStack(spacing: 16){
-                                ForEach(allPlants, id: \.id) { plant in
-                                    NavigationLink(destination: SinglePlantDetails(plant: plant), label: {
-                                        SinglePlantComponent(title: plant.title, star: "4.9", image: plant.image)
-                                    })
+                        if(selectedCategory == "All") {
+                            ScrollView(.horizontal, showsIndicators: false){
+                                HStack(spacing: 16){
+                                    ForEach(allPlants, id: \.id) { plant in
+                                        NavigationLink(destination: SinglePlantDetails(plant: plant), label: {
+                                            SinglePlantComponent(title: plant.title, star: "4.9", image: plant.image)
+                                        })
+                                        
+                                        
+    //                                    SinglePlantComponent(title: "Oscar Plant", star: "4.8", image: "plants2")
+                                    }
                                     
                                     
-//                                    SinglePlantComponent(title: "Oscar Plant", star: "4.8", image: "plants2")
                                 }
-                                
-                                
+                                .padding(40)
                             }
-                            .padding(40)
                         }
                         
                         ScrollView(.horizontal, showsIndicators: false){
@@ -138,7 +149,7 @@ struct SinglePlantComponent: View{
 
     
     var body: some View {
-//        NavigationView{
+
             VStack{
                 ZStack(alignment: .topTrailing){
                     Image(image)
@@ -165,7 +176,7 @@ struct SinglePlantComponent: View{
             .background(Color.white)
             .cornerRadius(20.0)
             .shadow(color: Color.black.opacity(0.1), radius: 20, x: 16, y:16)
-//        }
+
     }
 }
 struct RecommendedComponent: View{
